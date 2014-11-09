@@ -1,394 +1,897 @@
 <!doctype html>
 <html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Getting started with Vagrant - BADCamp 2014</title>
 
-	<head>
-		<meta charset="utf-8">
+  <meta name="description" content="Beginner's field guide to development with Vagrant">
+  <meta name="author" content="Alina Mackenzie">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="stylesheet" href="css/reveal.min.css">
+  <link rel="stylesheet" href="css/theme/default.css" id="theme">
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!-- For syntax highlighting -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/default.css" id="theme">
-
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
-
-		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
-		<script>
-			if( window.location.search.match( /print-pdf/gi ) ) {
-				var link = document.createElement( 'link' );
-				link.rel = 'stylesheet';
-				link.type = 'text/css';
-				link.href = 'css/print/pdf.css';
-				document.getElementsByTagName( 'head' )[0].appendChild( link );
-			}
-		</script>
-
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
-
-	<body>
-
-		<div class="reveal">
-
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section>
-					<h1>Reveal.js</h1>
-					<h3>HTML Presentations Made Easy</h3>
-					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
-					</p>
-				</section>
-
-				<section>
-					<h2>Heads Up</h2>
-					<p>
-						reveal.js is a framework for easily creating beautiful presentations using HTML. You'll need a browser with
-						support for CSS 3D transforms to see it in its full glory.
-					</p>
-
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
-				</section>
-
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>
-							Slides can be nested inside of other slides,
-							try pressing <a href="#" class="navigate-down">down</a>.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Press down or up to navigate.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>Cornify</p>
-						<a class="test" href="http://cornify.com">
-							<img width="280" height="326" src="https://s3.amazonaws.com/hakim-static/reveal-js/cornify.gif" alt="Unicorn">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 3</h2>
-						<p>That's it, time to go back up.</p>
-						<a href="#/2" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
-
-				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? No problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slid.es" target="_blank">http://slid.es</a>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
-				</section>
-
-				<section>
-					<h2>Works in Mobile Safari</h2>
-					<p>
-						Try it out! You can swipe through the slides and pinch your way to the overview.
-					</p>
-				</section>
-
-				<section>
-					<h2>Marvelous Unordered List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
-
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
-
-						For those of you who like that sort of thing. Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-
-						```
-						<section data-markdown>
-						  ## Markdown support
-
-						  For those of you who like that sort of thing.
-						  Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
-
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=cube#/transitions">Cube</a> -
-						<a href="?transition=page#/transitions">Page</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a> -
-						<a href="?transition=linear#/transitions">Linear</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?#/transitions">Default</a>
-					</p>
-				</section>
-
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						Reveal.js comes with a few themes built in: <br>
-						<a href="?#/themes">Default</a> -
-						<a href="?theme=sky#/themes">Sky</a> -
-						<a href="?theme=beige#/themes">Beige</a> -
-						<a href="?theme=simple#/themes">Simple</a> -
-						<a href="?theme=serif#/themes">Serif</a> -
-						<a href="?theme=night#/themes">Night</a> <br>
-						<a href="?theme=moon#/themes">Moon</a> -
-						<a href="?theme=solarized#/themes">Solarized</a>
-					</p>
-					<p>
-						<small>
-							* Theme demos are loaded after the presentation which leads to flicker. In production you should load your theme in the <code>&lt;head&gt;</code> using a <code>&lt;link&gt;</code>.
-						</small>
-					</p>
-				</section>
-
-				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the background.
-					</p>
-				</section>
-
-				<section data-state="customevent">
-					<h2>Custom Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
-
-				<section>
-					<section data-background="#007777">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#007777"</code> on a slide to change the full page background to the given color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code>&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Repeated Image Backgrounds</h2>
-						<pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-				</section>
-
-				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
-					<h2>Background Transitions</h2>
-					<p>
-						Pass reveal.js the <code>backgroundTransition: 'slide'</code> config argument to make backgrounds slide rather than fade.
-					</p>
-				</section>
-
-				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
-					<h2>Background Transition Override</h2>
-					<p>
-						You can override background transitions per slide by using <code>data-background-transition="slide"</code>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
-				</section>
-
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
+  <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+  <script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = 'css/print/pdf.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
     }
-  }
-}
-					</code></pre>
-					<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
+  </script>
 
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
+  <!--[if lt IE 9]>
+  <script src="lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
 
-				<section>
-					<section id="fragments">
-						<h2>Fragmented Views</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<ol>
-							<li class="fragment"><code>any type</code></li>
-							<li class="fragment"><em>of view</em></li>
-							<li class="fragment"><strong>fragments</strong></li>
-						</ol>
+<body>
 
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's a few styles of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment roll-in">roll-in</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-green">highlight-green</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p class="fragment highlight-current-blue">highlight-current-blue</p>
-					</section>
-				</section>
+<div class="reveal">
 
-				<section>
-					<h2>Spectacular image!</h2>
-					<a class="image" href="http://lab.hakim.se/meny/" target="_blank">
-						<img width="320" height="299" src="http://s3.amazonaws.com/hakim-static/portfolio/images/meny.png" alt="Meny">
-					</a>
-				</section>
+  <div class="slides">
+    <section>
+      <h1>Getting started<br /> <small>with</small> Vagrant</h1>
+      <p> 
+        Presented by <a href="http://drupal.org/u/alimac">alimac</a> / 
+        <a href="http://twitter.com/czaroxiejka">@czaroxiejka</a> <br /> 
+        <a href="http://speakerdeck.com/alimac">speakerdeck.com/alimac</a>
+      </p>
+    </section>
 
-				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, below is an example that's been uploaded to SlideShare.</p>
-					<iframe id="slideshare" src="http://www.slideshare.net/slideshow/embed_code/13872948" width="455" height="356" style="margin:0;overflow:hidden;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
-					<script>
-						document.getElementById('slideshare').attributeName = 'allowfullscreen';
-					</script>
-				</section>
+    <section>
+      <h2>About me</h2>
+      <ul>
+        <li>Alina Mackenzie</li>
+        <li>University of Illinois at Chicago</li>
+        <li>developer / system administrator / helpdesk support</li>
+      </ul>
+    </section>
 
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press b or period on your keyboard to enter the 'paused' mode. This mode is helpful when you want to take distracting slides off the screen
-						during a presentation.
-					</p>
-				</section>
+    <section>
+      <h2>About you</h2>
+      <ul>
+        <li>new to Drupal?</li>
+        <li>developer or site builder?</li>
+        <li>Drupal core or contrib developer?</li>
+        <li>curious about Vagrant?</li>
+      </ul>
+    </section>
 
-				<section>
-					<h2>Stellar Links</h2>
-					<ul>
-						<li><a href="http://slid.es">Try the online editor</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js">Source code on GitHub</a></li>
-						<li><a href="http://twitter.com/hakimel">Follow me on Twitter</a></li>
-					</ul>
-				</section>
+    <section>
+      <h2>Starting point</h2>
+      <ul>
+        <li>MAMP (Mac, Windows)</li>
+        <li>environment is not like production</li>
+  	<li>can't automate</li>
+        <li>not good for multiple projects</li>
+        <li class="fragment highlight-blue">good starting point</li>
+      </ul>
+    </section>
 
-				<section>
-					<h1>THE END</h1>
-					<h3>BY Hakim El Hattab / hakim.se</h3>
-				</section>
+    <section>
+      <h2>Why Vagrant?</h2>
+      <ul>
+        <li>reproducible</li>
+        <li>isolated</li>
+        <li>portable</li>
+        <li>supports automation</li>
+      </ul>
+    </section>
 
-			</div>
+    <section>
+      <h2>What is Vagrant?</h2>
+      <blockquote>
+        Vagrant is a tool for building complete development environments.
+      </blockquote>
+      <ul>
+        <li class="fragment">set of Ruby scripts</li>
+        <li class="fragment">set of commands</li>
+        <li class="fragment">wrapper that works with virtualization platforms and automation tools</li>
+      </ul>
+    </section>
 
-		</div>
+    <section>
+      <h2>Let's install Vagrant</h2>
+      <ul>
+        <li>Download Vagrant from <a href="http://vagrantup.com">vagrantup.com</a></li>
+        <li>Download VirtualBox from <a href="http://virtualbox.org">virtualbox.org</a></li>
+      </ul>
+    </section>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.min.js"></script>
 
-		<script>
+    <section>
+      <section>
+	<h2>Vocabulary</h2>
+        <ul>
+          <li>Host and guest</li>
+          <li>Box</li>
+          <li>Provider</li>
+          <li>Provisioner</li>
+          <li>Vagrantfile</li>
+          <li>Plugins</li>
+          <li>Shared folders</li>
+        </ul>
+      </section>
 
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
+      <section>
+        <h2>Host and guest</h2>
+        <ul>
+          <li><strong>Host</strong> - your laptop or desktop</li> 
+          <li><strong>Guest</strong> - virtual machine started on the host</li>
+        </ul>
+       
+      </section>
 
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
+      <section>
+        <h2>Box</h2>
+        <blockquote>
+          A <strong>box</strong> is a bundle containing an <strong>installed operating system</strong>
+	 (and some basic stuff) made for a specific provider (VirtualBox).
+        </blockquote>
+        <ul class="fragment">
+          <li>Package manager</li>
+          <li>SSH server</li>
+          <li>SSH user so Vagrant can connect</li>
+        </ul>
+      </section>
 
-				// Parallax scrolling
-				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-				// parallaxBackgroundSize: '2100px 900px',
+      <section>
+        <h2>Provider</h2>
+        <blockquote>
+	  A <strong>provider</strong> will handle the virtualization process.
+        </blockquote>
+        <ul class="fragment">
+          <li>VirtualBox (default)</li>
+          <li>VMWare</li>
+          <li>Amazon Web Service (AWS)</li>
+          <li>Digital Ocean</li>
+        </ul>         
 
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
+      </section>
 
-		</script>
+      <section>
+        <h2>Provisioner</h2>
+        <blockquote>
+          A <strong>provisioner</strong> will automate the setup 
+	  of your server, installing packages and performing tasks in general.
+        </blockquote>
+        <ul class="fragment">
+          <li>shell</li>
+          <li>Ansible</li>
+          <li>Puppet</li>
+          <li>Chef</li>
+          <li>Docker</li>
+          <li>Salt</li>
+        </ul>
+      </section>
 
-	</body>
+      <section>
+        <h2>Vagrantfile</h2>
+        <p>Configuration file for your Vagrant guest.</p>
+        <pre><code data-trim>
+Vagrant.configure("2") do |config| 
+
+  config.vm.box = "ubuntu/trusty64"
+
+end
+        </code></pre>
+      </section>
+
+      <section>
+        <h2>Plugins</h2>
+        <blockquote>
+          A plugin can add extra functionality to Vagrant, 
+	  like supporting a new provider.
+        </blockquote>        
+        <ul>
+          <li>vbguest</li>
+        </ul> 
+      </section>
+
+      <section>
+        <h2>Shared/Synced folders</h2>
+        <blockquote>
+          With a shared folder, you can edit your files 
+	  with your favorite editor installed on the Host machine.
+        </blockquote>
+      </section>
+    </section>
+
+    <section>
+      <section>
+        <h2>Simple example</h2>
+        <p>Vagrantfile:</p>
+        <pre><code data-trim>
+Vagrant.configure("2") do |config|
+
+  config.vm.box = "ubuntu/trusty64"
+  config.vm.network "public_network", ip: "192.168.0.17"
+  config.vm.synced_folder "www", "/var/www/html", type: "nfs"
+
+end
+        </code></pre>
+      </section>
+    </section>
+
+    <section>
+      <h2>Vagrant commands</h2>
+      <ul>
+	<li class="fragment"> <strong>status</strong> </li>
+	<li class="fragment"> <strong>up</strong> </li>
+	<li class="fragment"> <strong>ssh</strong> </li> 
+	<li class="fragment"> <strong>reload</strong> </li>
+	<li class="fragment"> <strong>provision</strong> </li>
+	<li class="fragment"> <strong>init</strong> </li>
+	<li class="fragment"> <strong>halt</strong> </li>
+	<li class="fragment"> <strong>destroy</strong> </li>
+        <li class="fragment"> <strong>suspend</strong> </li>
+        <li class="fragment"> <strong>resume</strong> </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Shell provisioner</h2>
+    </section>
+
+    <section>
+      <section>
+        <h2>More complex example</h2>
+        <p>Vagrantfile:</p>
+<pre><code data-trim>
+Vagrant.configure("2") do |config|
+
+  config.vm.box = "ubuntu/trusty64"
+  config.vm.network "private_network", type: "dhcp" 
+  config.vm.synced_folder "www", "/var/www/html", type: "nfs"
+
+  config.vm.provider "virtualbox" do |vb|
+    vb.memory = "1024"
+    vb.name = "trusty-d8"
+  end
+  
+  config.vm.provision "shell" do |s|
+    s.privileged = false 
+    s.path = "d8-provision.sh"
+    s.args = [ "badcamp", "BADCamp 2014" ]
+  end
+end
+</code></pre>
+      </section>
+
+      <section>
+        <h2>What we need</h2> 
+        <ul>
+          <li>Update package manager (apt)</li> 
+          <li class="fragment">Install development tools: git, curl, vim</li>
+          <li class="fragment">Install web server (Apache)</li> 
+	  <li class="fragment">Install database (MySQL)</li>
+	  <li class="fragment">Install PHP</li>
+	  <li class="fragment">Install Composer (PHP package manager)</li>
+	  <li class="fragment">Install Drush using Composer</li>
+	  <li class="fragment">Use Drush or git to download Drupal 8</li>
+	  <li class="fragment">Use Drush to install Drupal 8</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Get the code</h2>
+        <a href="http://github.com/alimac/badcamp-2014">github.com/alimac/badcamp-2014</a>
+      </section>
+
+      <section>
+        <h2>vagrant up</h2>
+        <pre><code>
+Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Importing base box 'ubuntu/trusty64'...
+==> default: Matching MAC address for NAT networking...
+==> default: Checking if box 'ubuntu/trusty64' is up to date...
+==> default: Setting the name of the VM: trusty-d8
+==> default: Clearing any previously set forwarded ports...
+==> default: Clearing any previously set network interfaces...
+==> default: Preparing network interfaces based on configuration...
+    default: Adapter 1: nat
+    default: Adapter 2: hostonly
+==> default: Forwarding ports...
+    default: 22 => 2222 (adapter 1)
+==> default: Running 'pre-boot' VM customizations...
+==> default: Booting VM...
+==> default: Waiting for machine to boot. This may take a few minutes...
+    default: SSH address: 127.0.0.1:2222
+    default: SSH username: vagrant
+    default: SSH auth method: private key
+    default: Warning: Connection timeout. Retrying...
+    default: Warning: Remote connection disconnect. Retrying...
+==> default: Machine booted and ready!
+GuestAdditions versions on your host (4.3.18) and guest (4.3.10) do not match.
+ * Stopping VirtualBox Additions
+   ...done.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following packages were automatically installed and are no longer required:
+  dkms fakeroot gcc gcc-4.8 libasan0 libatomic1 libc-dev-bin libc6-dev
+  libdrm-intel1 libdrm-nouveau2 libdrm-radeon1 libfakeroot libfontenc1
+  libgcc-4.8-dev libgl1-mesa-dri libgl1-mesa-glx libglapi-mesa libgomp1
+  libice6 libitm1 libllvm3.4 libpciaccess0 libpixman-1-0 libquadmath0 libsm6
+  libtsan0 libtxc-dxtn-s2tc0 libx11-xcb1 libxaw7 libxcb-dri2-0 libxcb-dri3-0
+  libxcb-glx0 libxcb-present0 libxcb-sync1 libxcomposite1 libxdamage1
+  libxfixes3 libxfont1 libxkbfile1 libxmu6 libxpm4 libxrandr2 libxrender1
+  libxshmfence1 libxt6 libxxf86vm1 linux-libc-dev manpages-dev x11-common
+  x11-xkb-utils xfonts-base xfonts-encodings xfonts-utils xserver-common
+  xserver-xorg-core
+Use 'apt-get autoremove' to remove them.
+The following packages will be REMOVED:
+  virtualbox-guest-dkms* virtualbox-guest-utils* virtualbox-guest-x11*
+0 upgraded, 0 newly installed, 3 to remove and 0 not upgraded.
+After this operation, 12.1 MB disk space will be freed.
+(Reading database ... 60959 files and directories currently installed.)
+Removing virtualbox-guest-dkms (4.3.10-dfsg-1) ...
+
+-------- Uninstall Beginning --------
+Module:  virtualbox-guest
+Version: 4.3.10
+Kernel:  3.13.0-39-generic (x86_64)
+-------------------------------------
+
+Status: Before uninstall, this module version was ACTIVE on this kernel.
+
+vboxguest.ko:
+ - Uninstallation
+   - Deleting from: /lib/modules/3.13.0-39-generic/updates/dkms/
+ - Original module
+   - No original module was found for this module on this kernel.
+   - Use the dkms install command to reinstall any previous module version.
+
+
+vboxsf.ko:
+ - Uninstallation
+   - Deleting from: /lib/modules/3.13.0-39-generic/updates/dkms/
+ - Original module
+   - No original module was found for this module on this kernel.
+   - Use the dkms install command to reinstall any previous module version.
+
+
+vboxvideo.ko:
+ - Uninstallation
+   - Deleting from: /lib/modules/3.13.0-39-generic/updates/dkms/
+ - Original module
+   - No original module was found for this module on this kernel.
+   - Use the dkms install command to reinstall any previous module version.
+
+depmod....
+
+DKMS: uninstall completed.
+
+------------------------------
+Deleting module version: 4.3.10
+completely from the DKMS tree.
+------------------------------
+Done.
+Removing virtualbox-guest-x11 (4.3.10-dfsg-1) ...
+Purging configuration files for virtualbox-guest-x11 (4.3.10-dfsg-1) ...
+Removing virtualbox-guest-utils (4.3.10-dfsg-1) ...
+Purging configuration files for virtualbox-guest-utils (4.3.10-dfsg-1) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Processing triggers for libc-bin (2.19-0ubuntu6.3) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+dkms is already the newest version.
+dkms set to manually installed.
+linux-headers-3.13.0-39-generic is already the newest version.
+linux-headers-3.13.0-39-generic set to manually installed.
+The following packages were automatically installed and are no longer required:
+  libdrm-intel1 libdrm-nouveau2 libdrm-radeon1 libfontenc1 libgl1-mesa-dri
+  libgl1-mesa-glx libglapi-mesa libice6 libllvm3.4 libpciaccess0 libpixman-1-0
+  libsm6 libtxc-dxtn-s2tc0 libx11-xcb1 libxaw7 libxcb-dri2-0 libxcb-dri3-0
+  libxcb-glx0 libxcb-present0 libxcb-sync1 libxcomposite1 libxdamage1
+  libxfixes3 libxfont1 libxkbfile1 libxmu6 libxpm4 libxrandr2 libxrender1
+  libxshmfence1 libxt6 libxxf86vm1 x11-common x11-xkb-utils xfonts-base
+  xfonts-encodings xfonts-utils xserver-common xserver-xorg-core
+Use 'apt-get autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Copy iso file /Applications/VirtualBox.app/Contents/MacOS/VBoxGuestAdditions.iso into the box /tmp/VBoxGuestAdditions.iso
+mount: block device /tmp/VBoxGuestAdditions.iso is write-protected, mounting read-only
+Installing Virtualbox Guest Additions 4.3.18 - guest version is 4.3.10
+Verifying archive integrity... All good.
+Uncompressing VirtualBox 4.3.18 Guest Additions for Linux............
+VirtualBox Guest Additions installer
+Copying additional installer modules ...
+Installing additional modules ...
+Removing existing VirtualBox DKMS kernel modules ...done.
+Removing existing VirtualBox non-DKMS kernel modules ...done.
+Building the VirtualBox Guest Additions kernel modules ...done.
+Doing non-kernel setup of the Guest Additions ...done.
+Starting the VirtualBox Guest Additions ...done.
+Installing the Window System drivers
+Could not find the X.Org or XFree86 Window System, skipping.
+An error occurred during installation of VirtualBox Guest Additions 4.3.18. Some functionality may not work as intended.
+In most cases it is OK that the "Window System drivers" installation failed.
+==> default: Checking for guest additions in VM...
+==> default: Setting hostname...
+==> default: Configuring and enabling network interfaces...
+==> default: Exporting NFS shared folders...
+==> default: Preparing to edit /etc/exports. Administrator privileges will be required...
+==> default: Mounting NFS shared folders...
+==> default: Mounting shared folders...
+    default: /vagrant => /Users/aag/projects/badcamp-2014/trusty
+==> default: Running provisioner: shell...
+    default: Running: /var/folders/7k/1cb1g9k92d9fw7c_wqjrnqkc0000gn/T/vagrant-shell20141108-8531-40br7s.sh
+==> default: Ign http://security.ubuntu.com trusty-security InRelease
+==> default: Get:1 http://security.ubuntu.com trusty-security Release.gpg [933 B]
+==> default: Ign http://archive.ubuntu.com trusty InRelease
+==> default: Get:2 http://security.ubuntu.com trusty-security Release [62.0 kB]
+==> default: Ign http://archive.ubuntu.com trusty-updates InRelease
+==> default: Hit http://archive.ubuntu.com trusty Release.gpg
+==> default: Get:3 http://archive.ubuntu.com trusty-updates Release.gpg [933 B]
+==> default: Get:4 http://security.ubuntu.com trusty-security/main Sources [49.5 kB]
+==> default: Hit http://archive.ubuntu.com trusty Release
+==> default: Get:5 http://security.ubuntu.com trusty-security/universe Sources [11.2 kB]
+==> default: Get:6 http://archive.ubuntu.com trusty-updates Release [62.0 kB]
+==> default: Get:7 http://security.ubuntu.com trusty-security/main amd64 Packages [153 kB]
+==> default: Get:8 http://security.ubuntu.com trusty-security/universe amd64 Packages [51.2 kB]
+==> default: Get:9 http://archive.ubuntu.com trusty/main Sources [1,064 kB]
+==> default: Get:10 http://security.ubuntu.com trusty-security/main Translation-en [75.0 kB]
+==> default: Get:11 http://security.ubuntu.com trusty-security/universe Translation-en [30.5 kB]
+==> default: Get:12 http://archive.ubuntu.com trusty/universe Sources [6,399 kB]
+==> default: Hit http://archive.ubuntu.com trusty/main amd64 Packages
+==> default: Hit http://archive.ubuntu.com trusty/universe amd64 Packages
+==> default: Hit http://archive.ubuntu.com trusty/main Translation-en
+==> default: Hit http://archive.ubuntu.com trusty/universe Translation-en
+==> default: Get:13 http://archive.ubuntu.com trusty-updates/main Sources [136 kB]
+==> default: Get:14 http://archive.ubuntu.com trusty-updates/universe Sources [89.3 kB]
+==> default: Get:15 http://archive.ubuntu.com trusty-updates/main amd64 Packages [356 kB]
+==> default: Get:16 http://archive.ubuntu.com trusty-updates/universe amd64 Packages [217 kB]
+==> default: Get:17 http://archive.ubuntu.com trusty-updates/main Translation-en [161 kB]
+==> default: Get:18 http://archive.ubuntu.com trusty-updates/universe Translation-en [109 kB]
+==> default: Ign http://archive.ubuntu.com trusty/main Translation-en_US
+==> default: Ign http://archive.ubuntu.com trusty/universe Translation-en_US
+==> default: Fetched 9,027 kB in 18s (491 kB/s)
+==> default: Reading package lists...
+==> default: dpkg-preconfigure: unable to re-open stdin: No such file or directory
+==> default: Reading package lists...
+==> default: Building dependency tree...
+==> default: Reading state information...
+==> default: The following packages were automatically installed and are no longer required:
+==> default:   libdrm-intel1 libdrm-nouveau2 libdrm-radeon1 libfontenc1 libgl1-mesa-dri
+==> default:   libgl1-mesa-glx libglapi-mesa libice6 libllvm3.4 libpciaccess0 libpixman-1-0
+==> default:   libsm6 libtxc-dxtn-s2tc0 libx11-xcb1 libxaw7 libxcb-dri2-0 libxcb-dri3-0
+==> default:   libxcb-glx0 libxcb-present0 libxcb-sync1 libxcomposite1 libxdamage1
+==> default:   libxfixes3 libxfont1 libxkbfile1 libxmu6 libxpm4 libxrandr2 libxrender1
+==> default:   libxshmfence1 libxt6 libxxf86vm1 x11-common x11-xkb-utils xfonts-base
+==> default:   xfonts-encodings xfonts-utils xserver-common xserver-xorg-core
+==> default: Use 'apt-get autoremove' to remove them.
+==> default: The following extra packages will be installed:
+==> default:   apache2-bin apache2-data libapr1 libaprutil1 libaprutil1-dbd-sqlite3
+==> default:   libaprutil1-ldap ssl-cert
+==> default: Suggested packages:
+==> default:   apache2-doc apache2-suexec-pristine apache2-suexec-custom apache2-utils
+==> default:   openssl-blacklist
+==> default: The following NEW packages will be installed:
+==> default:   apache2 apache2-bin apache2-data apache2-mpm-prefork libapr1 libaprutil1
+==> default:   libaprutil1-dbd-sqlite3 libaprutil1-ldap ssl-cert
+==> default: 0 upgraded, 9 newly installed, 0 to remove and 10 not upgraded.
+==> default: Need to get 1,285 kB of archives.
+==> default: After this operation, 5,365 kB of additional disk space will be used.
+==> default: Get:1 http://archive.ubuntu.com/ubuntu/ trusty/main libapr1 amd64 1.5.0-1 [85.1 kB]
+==> default: Get:2 http://archive.ubuntu.com/ubuntu/ trusty/main libaprutil1 amd64 1.5.3-1 [76.4 kB]
+==> default: Get:3 http://archive.ubuntu.com/ubuntu/ trusty/main libaprutil1-dbd-sqlite3 amd64 1.5.3-1 [10.5 kB]
+==> default: Get:4 http://archive.ubuntu.com/ubuntu/ trusty/main libaprutil1-ldap amd64 1.5.3-1 [8,634 B]
+==> default: Get:5 http://archive.ubuntu.com/ubuntu/ trusty-updates/main apache2-bin amd64 2.4.7-1ubuntu4.1 [839 kB]
+==> default: Get:6 http://archive.ubuntu.com/ubuntu/ trusty-updates/main apache2-data all 2.4.7-1ubuntu4.1 [160 kB]
+==> default: Get:7 http://archive.ubuntu.com/ubuntu/ trusty-updates/main apache2 amd64 2.4.7-1ubuntu4.1 [87.5 kB]
+==> default: Get:8 http://archive.ubuntu.com/ubuntu/ trusty-updates/main apache2-mpm-prefork amd64 2.4.7-1ubuntu4.1 [1,460 B]
+==> default: Get:9 http://archive.ubuntu.com/ubuntu/ trusty/main ssl-cert all 1.0.33 [16.6 kB]
+==> default: dpkg-preconfigure: unable to re-open stdin: No such file or directory
+==> default: Fetched 1,285 kB in 8s (149 kB/s)
+==> default: Selecting previously unselected package libapr1:amd64.
+==> default: (Reading database ... 61433 files and directories currently installed.)
+==> default: Preparing to unpack .../libapr1_1.5.0-1_amd64.deb ...
+==> default: Unpacking libapr1:amd64 (1.5.0-1) ...
+==> default: Selecting previously unselected package libaprutil1:amd64.
+==> default: Preparing to unpack .../libaprutil1_1.5.3-1_amd64.deb ...
+==> default: Unpacking libaprutil1:amd64 (1.5.3-1) ...
+==> default: Selecting previously unselected package libaprutil1-dbd-sqlite3:amd64.
+==> default: Preparing to unpack .../libaprutil1-dbd-sqlite3_1.5.3-1_amd64.deb ...
+==> default: Unpacking libaprutil1-dbd-sqlite3:amd64 (1.5.3-1) ...
+==> default: Selecting previously unselected package libaprutil1-ldap:amd64.
+==> default: Preparing to unpack .../libaprutil1-ldap_1.5.3-1_amd64.deb ...
+==> default: Unpacking libaprutil1-ldap:amd64 (1.5.3-1) ...
+==> default: Selecting previously unselected package apache2-bin.
+==> default: Preparing to unpack .../apache2-bin_2.4.7-1ubuntu4.1_amd64.deb ...
+==> default: Unpacking apache2-bin (2.4.7-1ubuntu4.1) ...
+==> default: Selecting previously unselected package apache2-data.
+==> default: Preparing to unpack .../apache2-data_2.4.7-1ubuntu4.1_all.deb ...
+==> default: Unpacking apache2-data (2.4.7-1ubuntu4.1) ...
+==> default: Selecting previously unselected package apache2.
+==> default: Preparing to unpack .../apache2_2.4.7-1ubuntu4.1_amd64.deb ...
+==> default: Unpacking apache2 (2.4.7-1ubuntu4.1) ...
+==> default: Selecting previously unselected package apache2-mpm-prefork.
+==> default: Preparing to unpack .../apache2-mpm-prefork_2.4.7-1ubuntu4.1_amd64.deb ...
+==> default: Unpacking apache2-mpm-prefork (2.4.7-1ubuntu4.1) ...
+==> default: Selecting previously unselected package ssl-cert.
+==> default: Preparing to unpack .../ssl-cert_1.0.33_all.deb ...
+==> default: Unpacking ssl-cert (1.0.33) ...
+==> default: Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+==> default: Processing triggers for ureadahead (0.100.0-16) ...
+==> default: Processing triggers for ufw (0.34~rc-0ubuntu2) ...
+==> default: Setting up libapr1:amd64 (1.5.0-1) ...
+==> default: Setting up libaprutil1:amd64 (1.5.3-1) ...
+==> default: Setting up libaprutil1-dbd-sqlite3:amd64 (1.5.3-1) ...
+==> default: Setting up libaprutil1-ldap:amd64 (1.5.3-1) ...
+==> default: Setting up apache2-bin (2.4.7-1ubuntu4.1) ...
+==> default: Setting up apache2-data (2.4.7-1ubuntu4.1) ...
+==> default: Setting up apache2 (2.4.7-1ubuntu4.1) ...
+==> default: Enabling module mpm_event.
+==> default: Enabling module authz_core.
+==> default: Enabling module authz_host.
+==> default: Enabling module authn_core.
+==> default: Enabling module auth_basic.
+==> default: Enabling module access_compat.
+==> default: Enabling module authn_file.
+==> default: Enabling module authz_user.
+==> default: Enabling module alias.
+==> default: Enabling module dir.
+==> default: Enabling module autoindex.
+==> default: Enabling module env.
+==> default: Enabling module mime.
+==> default: Enabling module negotiation.
+==> default: Enabling module setenvif.
+==> default: Enabling module filter.
+==> default: Enabling module deflate.
+==> default: Enabling module status.
+==> default: Enabling conf charset.
+==> default: Enabling conf localized-error-pages.
+==> default: Enabling conf other-vhosts-access-log.
+==> default: Enabling conf security.
+==> default: Enabling conf serve-cgi-bin.
+==> default: Enabling site 000-default.
+==> default:  * Starting web server apache2
+==> default:  * 
+==> default: Setting up ssl-cert (1.0.33) ...
+==> default: Processing triggers for ureadahead (0.100.0-16) ...
+==> default: Processing triggers for ufw (0.34~rc-0ubuntu2) ...
+==> default: Setting up apache2-mpm-prefork (2.4.7-1ubuntu4.1) ...
+==> default: Processing triggers for libc-bin (2.19-0ubuntu6.3) ...
+==> default: Enabling module rewrite.
+==> default: To activate the new configuration, you need to run:
+==> default:   service apache2 restart
+==> default: dpkg-preconfigure: unable to re-open stdin: No such file or directory
+==> default: 141109  5:28:06 [Warning] Using unique option prefix key_buffer instead of key_buffer_size is deprecated and will be removed in a future release. Please use the full name instead.
+==> default: mysql start/running, process 12642
+==> default: dpkg-preconfigure: unable to re-open stdin: No such file or directory
+==> default: Creating config file /etc/php5/mods-available/pdo.ini with new version
+==> default: php5_invoke: Enable module pdo for apache2 SAPI
+==> default: php5_invoke: Enable module pdo for cli SAPI
+==> default: Creating config file /etc/php5/mods-available/opcache.ini with new version
+==> default: php5_invoke: Enable module opcache for apache2 SAPI
+==> default: php5_invoke: Enable module opcache for cli SAPI
+==> default: Creating config file /etc/php5/mods-available/curl.ini with new version
+==> default: php5_invoke: Enable module curl for apache2 SAPI
+==> default: php5_invoke: Enable module curl for cli SAPI
+==> default: Creating config file /etc/php5/mods-available/gd.ini with new version
+==> default: php5_invoke: Enable module gd for apache2 SAPI
+==> default: php5_invoke: Enable module gd for cli SAPI
+==> default: Creating config file /etc/php5/mods-available/mysql.ini with new version
+==> default: php5_invoke: Enable module mysql for apache2 SAPI
+==> default: php5_invoke: Enable module mysql for cli SAPI
+==> default: Creating config file /etc/php5/mods-available/mysqli.ini with new version
+==> default: php5_invoke: Enable module mysqli for apache2 SAPI
+==> default: php5_invoke: Enable module mysqli for cli SAPI
+==> default: Creating config file /etc/php5/mods-available/pdo_mysql.ini with new version
+==> default: php5_invoke: Enable module pdo_mysql for apache2 SAPI
+==> default: php5_invoke: Enable module pdo_mysql for cli SAPI
+==> default: Creating config file /etc/php5/cli/php.ini with new version
+==> default: php5_invoke curl: already enabled for cli SAPI
+==> default: php5_invoke pdo: already enabled for cli SAPI
+==> default: php5_invoke mysql: already enabled for cli SAPI
+==> default: php5_invoke opcache: already enabled for cli SAPI
+==> default: php5_invoke gd: already enabled for cli SAPI
+==> default: php5_invoke pdo_mysql: already enabled for cli SAPI
+==> default: php5_invoke mysqli: already enabled for cli SAPI
+==> default: Creating config file /etc/php5/mods-available/readline.ini with new version
+==> default: php5_invoke: Enable module readline for apache2 SAPI
+==> default: php5_invoke: Enable module readline for cli SAPI
+==> default: Creating config file /etc/php5/apache2/php.ini with new version
+==> default: php5_invoke curl: already enabled for apache2 SAPI
+==> default: php5_invoke pdo: already enabled for apache2 SAPI
+==> default: php5_invoke mysql: already enabled for apache2 SAPI
+==> default: php5_invoke opcache: already enabled for apache2 SAPI
+==> default: php5_invoke gd: already enabled for apache2 SAPI
+==> default: php5_invoke pdo_mysql: already enabled for apache2 SAPI
+==> default: php5_invoke readline: already enabled for apache2 SAPI
+==> default: php5_invoke mysqli: already enabled for apache2 SAPI
+==> default: apache2_switch_mpm Switch to prefork
+==> default: apache2_invoke: Enable module php5
+==> default: php5_invoke: Enable module json for apache2 SAPI
+==> default: php5_invoke: Enable module json for cli SAPI
+==> default: Reading package lists...
+==> default: Building dependency tree...
+==> default: Reading state information...
+==> default: libapache2-mod-php5 is already the newest version.
+==> default: libapache2-mod-php5 set to manually installed.
+==> default: php5-common is already the newest version.
+==> default: php5-common set to manually installed.
+==> default: The following packages were automatically installed and are no longer required:
+==> default:   libdrm-intel1 libdrm-nouveau2 libdrm-radeon1 libfontenc1 libgl1-mesa-dri
+==> default:   libgl1-mesa-glx libglapi-mesa libice6 libllvm3.4 libpciaccess0 libpixman-1-0
+==> default:   libsm6 libtxc-dxtn-s2tc0 libx11-xcb1 libxaw7 libxcb-dri2-0 libxcb-dri3-0
+==> default:   libxcb-glx0 libxcb-present0 libxcb-sync1 libxcomposite1 libxdamage1
+==> default:   libxfixes3 libxfont1 libxkbfile1 libxmu6 libxrandr2 libxrender1
+==> default:   libxshmfence1 libxt6 libxxf86vm1 x11-common x11-xkb-utils xfonts-base
+==> default:   xfonts-encodings xfonts-utils xserver-common xserver-xorg-core
+==> default: Use 'apt-get autoremove' to remove them.
+==> default: 0 upgraded, 0 newly installed, 0 to remove and 10 not upgraded.
+==> default: #!/usr/bin/env php
+==> default: All settings correct for using Composer
+==> default: Downloading...
+==> default: 
+==> default: Composer successfully installed to: /home/vagrant/composer.phar
+==> default: 
+==> default: Use it: php composer.phar
+==> default: Changed current directory to /home/vagrant/.composer
+==> default: ./composer.json has been created
+==> default: Loading composer repositories with package information
+==> default: Updating dependencies (including require-dev)
+==> default:   - Installing pear/console_table (1.2.1)
+==> default:     Downloading: connection...
+==> default: 
+==> default:     Downloading: 100%
+==> default:          
+==> default: 
+==> default:   - Installing symfony/yaml (v2.5.6)
+==> default:     Downloading: connection...
+==> default: 
+==> default:     Downloading: 0%
+==> default:            
+==> default: 
+==> default: 
+==> default:     Downloading: 5%
+==> default: 
+==> default:     Downloading: 10%
+==> default: 
+==> default:     Downloading: 15%
+==> default: 
+==> default:     Downloading: 20%
+==> default: 
+==> default:     Downloading: 25%
+==> default: 
+==> default:     Downloading: 30%
+==> default: 
+==> default:     Downloading: 35%
+    Downloading: 40%
+    Downloading: 55%
+==> default: 
+==> default:     Downloading: 100%
+==> default:   - Installing d11wtq/boris (v1.0.8)
+==> default:     Downloading: connection...
+==> default: 
+==> default:     Downloading: 0%
+==> default:            
+==> default: 
+==> default: 
+==> default:     Downloading: 20%
+==> default: 
+==> default:     Downloading: 40%
+==> default: 
+==> default:     Downloading: 100%
+==> default:   - Installing drush/drush (dev-master ab47302)
+==> default:     Cloning ab4730218aed8dc5c9ae0dff0a72d23ccfb3dd5d
+==> default: pear/console_table suggests installing pear/Console_Color2 (>=0.1.2)
+==> default: Writing lock file
+==> default: Generating autoload files
+==> default: Cloning into 'html'...
+==> default: Checking out files:   2% (293/11283)   
+==> default: Checking out files:   3% (339/11283)   
+==> default: Checking out files:   4% (452/11283)   
+==> default: Checking out files:   5% (565/11283)   
+==> default: Checking out files:   6% (677/11283)   
+==> default: Checking out files:   7% (790/11283)   
+==> default: Checking out files:   7% (857/11283)   
+==> default: Checking out files:   8% (903/11283)   
+==> default: Checking out files:   9% (1016/11283)   
+==> default: Checking out files:  10% (1129/11283)   
+==> default: Checking out files:  11% (1242/11283)   
+==> default: Checking out files:  12% (1354/11283)   
+==> default: Checking out files:  12% (1414/11283)   
+==> default: Checking out files:  13% (1467/11283)   
+==> default: Checking out files:  14% (1580/11283)   
+==> default: Checking out files:  15% (1693/11283)   
+==> default: Checking out files:  16% (1806/11283)   
+==> default: Checking out files:  17% (1919/11283)   
+==> default: Checking out files:  17% (2008/11283)   
+==> default: Checking out files:  18% (2031/11283)   
+==> default: Checking out files:  19% (2144/11283)   
+==> default: Checking out files:  20% (2257/11283)   
+==> default: Checking out files:  21% (2370/11283)   
+==> default: Checking out files:  21% (2472/11283)   
+==> default: Checking out files:  22% (2483/11283)   
+==> default: Checking out files:  23% (2596/11283)   
+==> default: Checking out files:  24% (2708/11283)   
+==> default: Checking out files:  25% (2821/11283)   
+==> default: Checking out files:  25% (2931/11283)   
+==> default: Checking out files:  26% (2934/11283)   
+==> default: Checking out files:  27% (3047/11283)   
+==> default: Checking out files:  28% (3160/11283)   
+==> default: Checking out files:  29% (3273/11283)   
+==> default: Checking out files:  30% (3385/11283)   
+==> default: Checking out files:  30% (3436/11283)   
+==> default: Checking out files:  31% (3498/11283)   
+==> default: Checking out files:  32% (3611/11283)   
+==> default: Checking out files:  33% (3724/11283)   
+==> default: Checking out files:  34% (3837/11283)   
+==> default: Checking out files:  34% (3898/11283)   
+==> default: Checking out files:  35% (3950/11283)   
+==> default: Checking out files:  36% (4062/11283)   
+==> default: Checking out files:  37% (4175/11283)   
+==> default: Checking out files:  38% (4288/11283)   
+==> default: Checking out files:  39% (4401/11283)   
+==> default: Checking out files:  39% (4452/11283)   
+==> default: Checking out files:  40% (4514/11283)   
+==> default: Checking out files:  41% (4627/11283)   
+==> default: Checking out files:  42% (4739/11283)   
+==> default: Checking out files:  43% (4852/11283)   
+==> default: Checking out files:  43% (4863/11283)   
+==> default: Checking out files:  44% (4965/11283)   
+==> default: Checking out files:  45% (5078/11283)   
+==> default: Checking out files:  46% (5191/11283)   
+==> default: Checking out files:  46% (5263/11283)   
+==> default: Checking out files:  47% (5304/11283)   
+==> default: Checking out files:  48% (5416/11283)   
+==> default: Checking out files:  49% (5529/11283)   
+==> default: Checking out files:  50% (5642/11283)   
+==> default: Checking out files:  51% (5755/11283)   
+==> default: Checking out files:  51% (5765/11283)   
+==> default: Checking out files:  52% (5868/11283)   
+==> default: Checking out files:  53% (5980/11283)   
+==> default: Checking out files:  54% (6093/11283)   
+==> default: Checking out files:  55% (6206/11283)   
+==> default: Checking out files:  55% (6280/11283)   
+==> default: Checking out files:  56% (6319/11283)   
+==> default: Checking out files:  57% (6432/11283)   
+==> default: Checking out files:  58% (6545/11283)   
+==> default: Checking out files:  59% (6657/11283)   
+==> default: Checking out files:  60% (6770/11283)   
+==> default: Checking out files:  60% (6829/11283)   
+==> default: Checking out files:  61% (6883/11283)   
+==> default: Checking out files:  62% (6996/11283)   
+==> default: Checking out files:  63% (7109/11283)   
+==> default: Checking out files:  64% (7222/11283)   
+==> default: Checking out files:  64% (7282/11283)   
+==> default: Checking out files:  65% (7334/11283)   
+==> default: Checking out files:  66% (7447/11283)   
+==> default: Checking out files:  67% (7560/11283)   
+==> default: Checking out files:  68% (7673/11283)   
+==> default: Checking out files:  69% (7786/11283)   
+==> default: Checking out files:  69% (7813/11283)   
+==> default: Checking out files:  70% (7899/11283)   
+==> default: Checking out files:  71% (8011/11283)   
+==> default: Checking out files:  72% (8124/11283)   
+==> default: Checking out files:  73% (8237/11283)   
+==> default: Checking out files:  73% (8257/11283)   
+==> default: Checking out files:  74% (8350/11283)   
+==> default: Checking out files:  75% (8463/11283)   
+==> default: Checking out files:  76% (8576/11283)   
+==> default: Checking out files:  77% (8688/11283)   
+==> default: Checking out files:  78% (8801/11283)   
+==> default: Checking out files:  78% (8813/11283)   
+==> default: Checking out files:  79% (8914/11283)   
+==> default: Checking out files:  80% (9027/11283)   
+==> default: Checking out files:  81% (9140/11283)   
+==> default: Checking out files:  82% (9253/11283)   
+==> default: Checking out files:  82% (9361/11283)   
+==> default: Checking out files:  83% (9365/11283)   
+==> default: Checking out files:  84% (9478/11283)   
+==> default: Checking out files:  85% (9591/11283)   
+==> default: Checking out files:  86% (9704/11283)   
+==> default: Checking out files:  87% (9817/11283)   
+==> default: Checking out files:  87% (9910/11283)   
+==> default: Checking out files:  88% (9930/11283)   
+==> default: Checking out files:  89% (10042/11283)   
+==> default: Checking out files:  90% (10155/11283)   
+==> default: Checking out files:  91% (10268/11283)   
+==> default: Checking out files:  92% (10381/11283)   
+==> default: Checking out files:  92% (10458/11283)   
+==> default: Checking out files:  93% (10494/11283)   
+==> default: Checking out files:  94% (10607/11283)   
+==> default: Checking out files:  95% (10719/11283)   
+==> default: Checking out files:  96% (10832/11283)   
+==> default: Checking out files:  97% (10945/11283)   
+==> default: Checking out files:  97% (11045/11283)   
+==> default: Checking out files:  98% (11058/11283)   
+==> default: Checking out files:  99% (11171/11283)   
+==> default: Checking out files: 100% (11283/11283)   
+==> default: Checking out files: 100% (11283/11283), done.
+==> default: You are about to create a /var/www/html/html/sites/default/settings.php file and CREATE the 'd8' database. Do you want to continue? (y/n): 
+==> default: y
+==> default: Starting Drupal installation. This takes a while. Consider using the        [ok]
+==> default: --notify global option.
+==> default: Installation complete.  User name: admin  User password: admin              [ok]
+==> default: Congratulations, you installed Drupal!                                  [status]
+==> default: mysql stop/waiting
+==> default: mysql start/running, process 15831
+==> default:  * Restarting web server apache2
+==> default:    ...done.
+==> default: Your Drupal 8 site is at: http://172.28.128.3
+ 
+        </code></pre>
+        <p>About 8 minutes to a fully installed Drupal site</p>
+      </section>
+
+      <section>
+        <img src="img/d8-installed.png">
+      </section>
+
+      <section>
+        <img src="img/d8-logged-in.png">
+      </section>
+
+    </section>
+
+    <section>
+      <h2>Plugins</h2>
+      <p>vbguest automatically installs the host's VirtualBox Guest Additions on the guest system</p>
+      <p><strong>vagrant plugin install vagrant-vbguest</strong></p>
+    </section>
+
+    <section>
+      <h2>Tips</h2>
+      <ul>
+        <li class="fragment">red doesn't always mean error</li>
+        <li class="fragment"><strong>vagrant version</strong></li>
+        <li class="fragment"><strong>vagrant global-status</strong></li>
+        <li class="fragment"><strong>vagrant global-status --prune</strong> if you delete a directory with a running VM</li>
+        <li class="fragment"><strong>sudo rm /etc/exports</strong> if you rename your VM directory</li>
+        <li class="fragment">edit <strong>/etc/sudoers</strong> to avoid being prompted for administrator password</li>
+      </ul>
+    </section>
+    
+    <section>
+      <h2>Thank you</h2>
+     
+    </section>
+
+  </div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
+
+<script>
+			
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    theme: Reveal.getQueryHash().theme || 'beige', // available themes are in /css/theme
+    transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
+
+
+    // Optional libraries used to extend on reveal.js
+    dependencies: [
+      { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+    ]
+  });
+
+</script>
+
+</body>
 </html>
