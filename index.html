@@ -96,15 +96,16 @@
       <ul>
         <li class="fragment">set of Ruby scripts</li>
         <li class="fragment">set of commands</li>
-        <li class="fragment">wrapper that works with virtualization platforms and automation tools</li>
+        <li class="fragment">"remote control" that works with virtualization platforms 
+          (VirtualBox, VMWare) and automation tools (shell, Chef, Ansible)</li>
       </ul>
     </section>
 
     <section>
       <h2>Let's install Vagrant</h2>
       <ul>
-        <li>Download Vagrant from <a href="http://vagrantup.com">vagrantup.com</a></li>
-        <li>Download VirtualBox from <a href="http://virtualbox.org">virtualbox.org</a></li>
+        <li class="fragment">Download Vagrant from <a href="http://vagrantup.com">vagrantup.com</a></li>
+        <li class="fragment">Download VirtualBox from <a href="http://virtualbox.org">virtualbox.org</a></li>
       </ul>
     </section>
 
@@ -143,6 +144,8 @@
           <li>SSH server</li>
           <li>SSH user so Vagrant can connect</li>
         </ul>
+        <p class="fragment">Get boxes from <a href="http://vagrantcloud.com">vagrantcloud.com</a>, 
+          <a href="http://vagrantbox.es">vagrantbox.es</a>, etc.</p>
       </section>
 
       <section>
@@ -221,26 +224,41 @@ Vagrant.configure("2") do |config|
 end
         </code></pre>
       </section>
+
+ <section>
+        <h2>Commands</h2>
+        <p>Terminal:</p>
+        <ul>
+          <li>mkdir www</li>
+          <li>vagrant up</li>
+          <li>vagrant ssh</li>
+        </ul>
+      </section>
     </section>
 
     <section>
       <h2>Vagrant commands</h2>
       <ul>
-	<li class="fragment"> <strong>status</strong> </li>
-	<li class="fragment"> <strong>up</strong> </li>
-	<li class="fragment"> <strong>ssh</strong> </li> 
-	<li class="fragment"> <strong>reload</strong> </li>
-	<li class="fragment"> <strong>provision</strong> </li>
-	<li class="fragment"> <strong>init</strong> </li>
-	<li class="fragment"> <strong>halt</strong> </li>
-	<li class="fragment"> <strong>destroy</strong> </li>
-        <li class="fragment"> <strong>suspend</strong> </li>
-        <li class="fragment"> <strong>resume</strong> </li>
+	<li class="fragment"> vagrant <strong>status</strong> </li>
+	<li class="fragment"> vagrant <strong>global-status</strong> </li>
+	<li class="fragment"> vagrant <strong>up</strong> </li>
+	<li class="fragment"> vagrant <strong>ssh</strong> </li> 
+	<li class="fragment"> vagrant <strong>reload</strong> </li>
+	<li class="fragment"> vagrant <strong>provision</strong> </li>
+	<li class="fragment"> vagrant <strong>init</strong> </li>
+	<li class="fragment"> vagrant <strong>halt</strong> </li>
+	<li class="fragment"> vagrant <strong>destroy</strong> </li>
+        <li class="fragment"> vagrant <strong>suspend</strong> </li>
+        <li class="fragment"> vagrant <strong>resume</strong> </li>
       </ul>
     </section>
 
     <section>
       <h2>Shell provisioner</h2>
+      <ul>
+        <li> not easy to read for more complex setups </li>
+        <li> not idempotent </li> 
+        <li class="fragment highlight-blue"> good starting point </li>
     </section>
 
     <section>
@@ -256,20 +274,17 @@ Vagrant.configure("2") do |config|
 
   config.vm.provider "virtualbox" do |vb|
     vb.memory = "1024"
-    vb.name = "trusty-d8"
   end
   
   config.vm.provision "shell" do |s|
-    s.privileged = false 
     s.path = "d8-provision.sh"
-    s.args = [ "badcamp", "BADCamp 2014" ]
   end
 end
 </code></pre>
       </section>
 
       <section>
-        <h2>What we need</h2> 
+        <h2>Provisioning steps</h2> 
         <ul>
           <li>Update package manager (apt)</li> 
           <li class="fragment">Install development tools: git, curl, vim</li>
@@ -280,6 +295,23 @@ end
 	  <li class="fragment">Install Drush using Composer</li>
 	  <li class="fragment">Use Drush or git to download Drupal 8</li>
 	  <li class="fragment">Use Drush to install Drupal 8</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Commands</h2>
+        <p>d8-provision.sh</p>
+        <ul>
+          <li> sudo apt-get update</li>
+          <li class="fragment">sudo apt-get install git curl vim</li>
+          <li class="fragment">sudo apt-get install apache2</li>
+          <li class="fragment">sudo apt-get install mysql-server</li>
+          <li class="fragment">sudo apt-get install php5</li> 
+          <li class="fragment">curl -sS https://getcomposer.org/installer | php</li>
+          <li class="fragment">composer global require drush/drush:dev-master</li>
+          <li class="fragment">drush dl drupal-8</li>
+          <li class="fragment">git clone --branch 8.0.x http://git.drupal.org/project/drupal.git</li>
+          <li class="fragment">drush site-install --account-pass=admin <br />--db-url=mysql://root:root@localhost/d8</li>
         </ul>
       </section>
 
@@ -848,8 +880,8 @@ In most cases it is OK that the "Window System drivers" installation failed.
       <h2>Tips</h2>
       <ul>
         <li class="fragment">red doesn't always mean error</li>
-        <li class="fragment"><strong>vagrant version</strong></li>
-        <li class="fragment"><strong>vagrant global-status</strong></li>
+        <li class="fragment"><strong>vagrant version</strong> to check for updates (not vagrant --version)</li>
+        <li class="fragment"><strong>vagrant global-status</strong> to see all VM on the host</li>
         <li class="fragment"><strong>vagrant global-status --prune</strong> if you delete a directory with a running VM</li>
         <li class="fragment"><strong>sudo rm /etc/exports</strong> if you rename your VM directory</li>
         <li class="fragment">edit <strong>/etc/sudoers</strong> to avoid being prompted for administrator password</li>
@@ -858,7 +890,10 @@ In most cases it is OK that the "Window System drivers" installation failed.
     
     <section>
       <h2>Thank you</h2>
-     
+      <p><a href="http://speakerdeck.com/alimac">speakerdeck.com/alimac</a></p> 
+      <p><a href="http://github.com/alimac/badcamp-2014">github.com/alimac/badcamp-2014</a></p> 
+      <p><a href="http://drupal.org/u/alimac">alimac</a> on drupal.org, IRC</p>
+      <p><a href="http://twitter.com/czaroxiejka">@czaroxiejka</a></p> 
     </section>
 
   </div>
